@@ -2,9 +2,38 @@
     &__pictures{
         background-color: $color-primary-dark;
         grid-column: full-start / col-end 4;
+        background-image: linear-gradient(rgba($color-primary,.5),rgba($color-primary,.5)), url(../img/back.jpg); 
+        display: grid;
+        grid-template-rows: repeat(6,1fr);
+        grid-template-columns: repeat(6,1fr);
+        align-items: center;//align it's child to center in cross axis
     }
     &__content{
         background-color: $color-grey-light-2;
         grid-column: col-start 5 / full-end;
+        padding: 6rem 7vw;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1;
+        align-content: center;//align it's child to center in cross axis
+        justify-items: start;//main-axis left to right
+    }
+    &__img--1{
+      width: 100%;
+      grid-row: 2 / span 4;//2 / 6;
+      grid-column: 2/6;
+    }
+    &__img--2{
+        width: 110%;
+        grid-row: 4 / 7;//2 / 6;
+        grid-column: 4/-1;
+        z-index: 10;
+    }
+    &_text{
+        font-size: 1.4rem;
+        font-size: italic;
     }
 }
